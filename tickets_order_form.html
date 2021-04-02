@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Event Tickets Order Form</title>
+	<link rel="stylesheet" type="text/css" href="styles/normalize.css">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+
+<body>
+	<div id="frame">
+		<header>
+			<img src="images/ornament-logo.png" alt="New Year Central Logo" style="width: 400px;">
+			<div id="header-line-1">New Year Central</div>
+			<div id="header-line-2">For the child in all of us!</div>
+		</header>
+
+		<!-- navigation starts -->
+		<nav id="nav_menu">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about_us.html">About Us</a></li>
+				<li><a href="products.html">Our Products</a></li>
+				<li><a href="tickets_order_form.html" class="current">Event Tickets</a></li>
+				<li><a href="contact_us.html">Contact Us</a></li>
+			</ul>
+		</nav>
+
+		<aside>
+			<div class="sidebar-title">Products of The Week...</div>
+			<ul>
+				<li><a href="assets/products/berry-garland.html">Natural Holly Berry Garland, 5f - $74.99</a></li>
+				<li><a href="assets/products/artificial-red-berry-garland.html">Artificial Red Berry and White Edge
+						Holly Leaf Christmas Garland, 5.5f - $38.99</a></li>
+				<li><a href="assets/products/christmas-berries-stems.html">Christmas Berries Red Stems Evergreen Pine
+						Branches, 8pcs - $15.99</a></li>
+			</ul>
+		</aside>
+
+		<main>
+			<h1>Order Event Tickets</h1>
+			<!-- The form starts here... -->
+			<form name="order_form" method="POST" action="./place_order.html">
+
+				<!-- Member Information -->
+				<fieldset form="order_form" name="member_info">
+					<legend>Member Information</legend>
+					<!-- Customer Information Text Input -->
+					<p><span id="cus_email">E-Mail: </span><input required type="text"
+							title="E-Mail should be in format of your-email@provider.com"
+							pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autofocus></p>
+					<p><span id="cus_fname">First Name: </span><input required id="fname" type="text"
+							title="First name should only be alphabetical characters" pattern="[A-Za-z]"></p>
+					<p><span id="cus_lname">Last Name: </span><input required id="lname" type="text"
+							title="Last name should only be alphabetical characters" pattern="[A-Za-z]"></p>
+					<p><span id="cus_address">Address: </span><input id="address" type="text"></p>
+					<p><span id="cus_city">City: </span><input required id="city" type="text"
+							title="City should only be alphabetical characters" pattern="[A-Za-z]"></p>
+					<p><span id="cus_province">Province: </span><input required id="prov" type="text"
+							placeholder="2 Character Code" title="Province code should only be 2 characters"
+							pattern="[A-Za-z]{2}"></p>
+					<p><span id="cus_postal">Postal Code: </span> <input required id="postal" type="text"
+							placeholder="6 Characters"
+							title="Postal code should be 6 alphanumeric characters in the format of A1A 1A1"
+							pattern="[A-Za-z0-9]{6}"></p>
+					<p><span id="cus_phone">Phone Number: </span><input required type="text" placeholder="999-999-9999"
+							title="Phone number should be in format of 999-999-9999" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+					</p>
+				</fieldset>
+
+				<!-- Ordering Information -->
+				<fieldset form="order_form" name="order_info">
+					<legend>Ordering Information</legend>
+
+					<!-- Event Selection Dropdown -->
+					<p><span id="event">Event: </span>
+						<select>
+							<option>Cookie Decoration Contest</option>
+							<option>Tree Decoration Contest</option>
+							<option>Gift of Light Ride-Along</option>
+							<option>Breakfast with Santa</option>
+						</select>
+					</p>
+
+					<!-- Order Type Dropdown -->
+					<p><span id="order_type">Order Type: </span>
+						<select>
+							<option>Member Package</option>
+							<option>Donor Package</option>
+							<option>Single Tickets</option>
+						</select>
+					</p>
+					<p><span id="ticket_num">Number of Tickets: </span><input id="ticket_quant" type="text"
+							placeholder="Number of Single Tickets"
+							title="Number of tickets should be a whole number between 0-999" pattern="[0-9]{3}"></p>
+				</fieldset>
+
+				<!-- Payment Method -->
+				<fieldset form="order_form" name="payment_info">
+					<legend>Payment Method</legend>
+					<p id="radios">
+
+						<!-- Bill Me Radio -->
+						<input type="radio" class="radio" name="payment-method" value="bill_me">
+						<!-- I ran out of time and couldn't troubleshoot why I couldn't use labels to click radio button even after proper implementation -->
+						<label for="bill_me">Bill Me</label>
+
+						<!-- Credit Card Radio -->
+						<input type="radio" id="credit_card" class="radio" name="payment-method" value="credit_card">
+						<label for="credit_card">Credit Card</label>
+					</p>
+				</fieldset>
+
+				<!-- Credit Card Information -->
+				<fieldset form="order_form" name="cc_info">
+					<legend>Credit Card Information</legend>
+					<p>
+						<!-- Card Type Dropdown -->
+						<span id="card_type">Card Type: </span>
+						<select id="cc_type">
+							<option>Visa</option>
+							<option>Mastercard</option>
+							<option>Discover</option>
+						</select>
+					</p>
+					<p>
+						<!-- Card Number Text Input -->
+						<span id="card_num">Card Number: </span>
+						<input id="cc_num" type="text" placeholder="16 Digits"
+							title="Credit card numbers should be in the format of 9999-9999-9999-9999"
+							pattern="^\d{4}-\d{4}-\d{4}-\{4}$">
+					</p>
+					<p>
+						<!-- Card Expiration Month Dropdown -->
+						<span id="exp_date">Expiration Date: </span>
+						<select id="cc_month">
+							<option>January</option>
+							<option>February</option>
+							<option>March</option>
+							<option>April</option>
+							<option>May</option>
+							<option>June</option>
+							<option>July</option>
+							<option>August</option>
+							<option>September</option>
+							<option>October</option>
+							<option>November</option>
+							<option>December</option>
+						</select>
+
+						<!-- Card Expiration Year Dropdown -->
+						<select id="cc_year">
+							<option>2021</option>
+							<option>2022</option>
+							<option>2023</option>
+							<option>2024</option>
+							<option>2025</option>
+							<option>2026</option>
+							<option>2027</option>
+						</select>
+					</p>
+				</fieldset>
+
+				<!-- Submit/Reset Buttons -->
+				<fieldset name="submit">
+					<legend>Submit Your Order</legend>
+					<button id="submit">Submit</button>
+					<input type="reset" id="reset" value="Reset Fields">
+				</fieldset>
+			</form>
+
+		</main>
+
+		<footer>
+			<p>&copy; 2021 New Year Central. Created by Johnny White.</p>
+		</footer>
+	</div>
+</body>
+
+</html>

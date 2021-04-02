@@ -1,0 +1,355 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body  {	
+	background-image: url("../images/berry.jpg");
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	max-width: 1600px;
+}
+
+div#frame {
+	margin: auto;
+	padding: 20px 30px 20px 20px;
+	width: 50%;
+	min-width: 900px;
+	background-color: #ffffff;	
+	background-image: linear-gradient(#ffffff 20%, #fdf7e8 70%, #ffffff 100%);
+	border: 2px solid #009926;
+	border-radius: 8px;
+	box-shadow: 0px 0px 90px 2px #008020;
+}
+
+p {
+	margin: 20px 0px;
+}
+
+a {
+	color: #008020; 
+}
+
+a:link, a:visited { 
+	text-decoration: none; 
+}
+
+a:hover, a:focus { 
+    text-decoration: underline; 
+}
+
+/* Header */
+header {
+	height: 160px;
+	border-bottom: 2px solid #e8b417;
+}
+	
+header img { 
+	float: left; 
+} 
+
+header div#header-line-1 {
+	font-size: 300%;
+	font-weight: bold;	
+	text-align: right;
+	color: #ecc03b;
+	text-shadow: 2px 2px 2px black;
+}
+
+header div#header-line-2 {
+	font-size: 130%;
+	font-weight: bold;
+	text-align: right;
+	font-style: italic;
+	color: #008020;
+}
+
+/* aside */
+aside {
+	width: 230px;
+	float: left;
+	margin: 30px 10px 0px 0px;
+}
+
+aside div.sidebar-title {
+	font-size: 115%;
+	font-weight: bold;
+	color: #d1a215;
+}
+
+aside ul {
+	margin: 15px 0px 0px 15px;
+}
+
+aside ul li {
+	margin: 15px 0px 0px 0px;
+}
+
+aside ul li a{
+	font-style: italic;
+	font-size: 90%;
+}
+
+/* Main */
+main {
+	margin: 20px 0;
+	padding-left: 20px;
+	float: left;
+	width: 638px;
+	min-height: 600px;
+	border-left: 2px solid #e8b417;
+}
+
+main h1 { 
+	margin: 0;
+	font-size: 200%;
+}
+
+main h1:first-letter { 
+	font-size: 240%;
+}
+
+main h2 {
+	margin: 25px 0px;
+	font-size: 125%;
+}
+
+main h3 {	
+	font-size: 110%;
+}
+
+main ul#product-categories {
+	list-style-type: none;
+}
+
+main ul#product-categories li {
+	margin: 35px 0px;
+}
+
+main ul#product-categories h3 {
+	margin-top: 10px;
+}
+
+main ul#product-categories p{
+	margin-top: 5px;
+}
+
+main ul#product-categories img {
+	border: 2px solid #e8b417;
+	border-radius: 10px;
+	box-shadow: 0px 0px 6px 2px #ecc03b;
+}
+
+/* the styles for the navigation menu */
+#nav_menu {
+	margin-top: 2px;
+}
+
+#nav_menu ul {
+	list-style-type: none;
+	position: relative;
+}
+
+#nav_menu ul li {
+	float: left;
+}
+
+#nav_menu ul li a {
+    background-image: linear-gradient(#fdf7e8 15%, #ffffff 55%, #fdf7e8 100%);
+	width: 180px;
+	padding: 1em 0;
+	display: block;
+    text-align: center;    
+    text-decoration: none;  
+	font-weight: bold;
+}
+
+#nav_menu ul li a:hover, #nav_menu ul li a:focus {
+	color: #d1a215;
+}
+
+#nav_menu a.current, #nav_menu a.current:hover, #nav_menu a.current:focus {
+	color: #d1a215;	
+	font-weight: bold;
+}
+
+/* Footer */
+footer {
+	clear: left;
+	border-top: 2px solid #e8b417;
+}
+
+footer p {
+	font-size: 80%;
+	text-align: center;
+}
+
+/* Form Elements */
+label {
+	display: inline;
+}
+
+legend {
+	font-size: 85%;
+	font-weight: bold;
+	color: gray;
+	margin-bottom: 1px;
+}
+
+fieldset {
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+label, select, input, button {
+	font-size: 90%;
+}
+
+.radio {
+	padding-left: 100%;
+}
+
+select:not(#cc_month):not(#cc_year), input:not([type=radio]):not([type=button]) {
+	width: 15em;
+}
+
+select:not(#cc_month):not(#cc_year):not(#cc_type), input:not([type=radio]):not([type=button]):not(#reset) {
+	float: right;
+	margin-right: 30%;
+}
+
+#cc_month {
+	margin-left: 0.7%;
+}
+
+#cc_year {
+	margin-left: 1.5%;
+}
+
+#cc_type {
+	margin-left: 0.8%;
+}
+
+select, input {
+	margin-top: 0;
+	margin-bottom: 0;
+	outline: none;
+	height: 20px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+#fname, #lname, #city, #province, #postal, #cc_num {
+	border: solid 2px #e8b417;
+}
+
+/* Form Label Management */
+
+fieldset p {
+	margin-top: 14px;
+	margin-bottom: 14px;
+}
+
+/*Member Information*/
+#cus_email {
+	display: inline-block;
+	padding-left: 22.5%;
+}
+
+#cus_fname {
+	display: inline-block;
+	padding-left: 16.2%;
+}
+
+#cus_lname {
+	display: inline-block;
+	padding-left: 16.5%;
+}
+
+#cus_address {
+	display: inline-block;
+	padding-left: 20%;
+}
+
+#cus_city {
+	display: inline-block;
+	padding-left: 25.3%;
+}
+
+#cus_province {
+	display: inline-block;
+	padding-left: 19.2%;
+}
+
+#cus_postal {
+	display: inline-block;
+	padding-left: 15%;
+}
+
+#cus_phone {
+	display: inline-block;
+	padding-left: 10.9%;
+}
+
+/*Ordering Information*/
+#event {
+	display: inline-block;
+	padding-left: 23.5%;
+}
+
+#order_type {
+	display: inline-block;
+	padding-left: 16.5%;
+}
+
+
+#ticket_num {
+	display: inline-block;
+	padding-left: 7%;
+}
+
+/* Payment Method */
+#radios label {
+	float: left;
+	clear: none;
+	display: block;
+	padding: 1px 1em 0px 5px;
+}
+
+#radios {
+	padding-left: 10%;
+	float: left;
+	clear: none;
+}
+
+#radios input[type=radio] {
+	float: left;
+	clear: none;
+	padding-left: 5%;
+}
+
+/* Credit Card Information */
+#card_type {
+	display: inline-block;
+	padding-left: 18%;
+}
+
+#card_num {
+	display: inline-block;
+	padding-left: 13.8%;
+}
+
+#exp_date {
+	display: inline-block;
+	padding-left: 11%;
+}
+
+/* Submit/Reset Buttons */
+#submit, #reset {
+	width: 10em;
+}
+
+#submit {
+	margin-left: 34%;
+	margin-right: 1.5%;
+}
